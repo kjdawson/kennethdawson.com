@@ -1,20 +1,14 @@
-/*
-	Overflow by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	var settings = {
 		
-		// Full screen header?
+		// Full screen header setting
 			fullScreenHeader: true,
 
-		// Parallax?
+		// Parallax setting
 			parallax: true,
 
-		// Lower = more intense. Higher = less intense.
+		// Parallax factor setting
 			parallaxFactor: 10
 
 	};
@@ -42,14 +36,14 @@
 		
 		}
 			
-		// Disable animations/transitions until the page has loaded.
+
 			$body.addClass('is-loading');
 			
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
 			});
 			
-		// CSS polyfills (IE<9).
+
 			if (skel.vars.IEVersion < 9)
 				$(':last-child').addClass('last-child');
 
@@ -128,7 +122,7 @@
 					})
 					.trigger('resize.overflow_parallax');
 
-				// IE's smooth scroll kind of screws this up, so we have to turn it off.
+				
 					if (skel.vars.IEVersion < 11)
 						$window.unbind('scroll.overflow_parallax');
 			
